@@ -19,6 +19,13 @@ public class Phone {
         this.description = description;
     }
 
+    public Phone(String name, String brand, long price, String description) {
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+        this.description = description;
+    }
+
     public long getId() {
         return id;
     }
