@@ -14,7 +14,7 @@ public class PhoneModel {
 
     {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root$password= ");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/examWCD?user=root$password= ");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -148,7 +148,7 @@ public class PhoneModel {
                 String exitPhonedescription = rs.getString(4);
                 Phone phone = new Phone(exitPhoneid,exitPhonename,exitPhonebrand,exitPhoneprice,exitPhonedescription);
                 listPhone.add(phone);
-                
+
             }
             return listPhone;
         }catch (SQLException e){
@@ -160,7 +160,7 @@ public class PhoneModel {
     public boolean insert(Phone phone){
         Connection connection;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root$password= ");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/examWCD?user=root$password= ");
             PreparedStatement preparedStatement = connection.prepareStatement("insert into Phone(phone)");
         }catch (Exception e){
             System.out.println("SQLException" + e.getMessage());
